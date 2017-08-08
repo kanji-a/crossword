@@ -5,10 +5,15 @@ import java.util.*;
 public class CrosswordMain {
 
 	public static void main(String[] args) {
-		List<String> listIn = new ArrayList<String>();
-		List<String> listCw = new ArrayList<String>();
-		listIn = FunctionFile.fileToList(Const.dictionaryName);
-		listCw = FunctionString.toUpperCaseJpList(listIn);
+		
+		// 単語リスト読み込み
+		List<String> rawWordList = new ArrayList<String>();
+		List<String> formattedWordList = new ArrayList<String>();
+		rawWordList = FunctionFile.fileToList(Const.dictionaryName);
+		formattedWordList = FunctionString.toUpperCaseJpList(rawWordList);
+		
+		// 盤面作成
+		String[][] board = new String[Const.boardHeight][Const.boardWidth];
 	}
 
 }
